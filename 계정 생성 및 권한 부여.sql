@@ -24,3 +24,15 @@ WHERE GRANTEE = 'C##DONGIKSHIN' ;
 
 -- https://aileen93.tistory.com/17 
 -- https://jhroom.tistory.com/168
+
+-- 권한 부여
+grant 
+    select,insert,delete,update -- 권한 리스트 
+    on testy -- 권한 줄 테이블
+    to c##dongikshin  -- 대상 유저
+    with grant option; -- 권한을 부여할 수 있는 권한
+    
+-- 권한 회수
+revoke select on testy from c##dongikshin;
+    
+    
